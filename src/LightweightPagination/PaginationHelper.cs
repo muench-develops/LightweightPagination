@@ -105,6 +105,19 @@ public static class PaginationHelper
         {
             throw new ArgumentException("Page size must be greater than zero.", nameof(pageSize));
         }
+
+        // Check for overflow when calculating skip count
+        if ((long)pageNumber * pageSize > int.MaxValue)
+        {
+            throw new ArgumentException("The combination of page number and page size results in an overflow.");
+        }
+
+        // Optional: Define realistic upper limits
+        const int maxPageSize = 100_000; // Example: Limit page size to 100,000 items
+        if (pageSize > maxPageSize)
+        {
+            throw new ArgumentException($"Page size cannot exceed {maxPageSize}.", nameof(pageSize));
+        }
     }
 
     private static async IAsyncEnumerable<T> PaginateAsyncIterator<T>(IAsyncEnumerable<T> source, int pageNumber, int pageSize)
