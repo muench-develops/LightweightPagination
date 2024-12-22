@@ -112,8 +112,7 @@ public static class PaginationHelper
             throw new ArgumentException("The combination of page number and page size results in an overflow.");
         }
 
-        // Optional: Define realistic upper limits
-        const int maxPageSize = 100_000; // Example: Limit page size to 100,000 items
+        const int maxPageSize = 100000;
         if (pageSize > maxPageSize)
         {
             throw new ArgumentException($"Page size cannot exceed {maxPageSize}.", nameof(pageSize));

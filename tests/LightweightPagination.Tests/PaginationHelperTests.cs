@@ -181,4 +181,35 @@ public class PaginationHelperTests
         // Assert
         await act.Should().ThrowAsync<ArgumentException>().WithMessage("*Page size must be greater than zero.*");
     }
+
+    [Fact]
+    public void PaginateShouldThrowExceptionWhenPageNumberAndPageSizeCauseOverflow()
+    {
+        // Arrange
+        IEnumerable<int> items = Enumerable.Range(1, 10);
+
+        // Act
+        Action act = () => PaginationHelper.Paginate(items, int.MaxValue, 2);
+
+        // Assert
+        act.Should().Throw<ArgumentException>()
+            .WithMessage("The combination of page number and page size results in an overflow.");
+    }
+
+    [Fact]
+    public void PaginateShouldThrowExceptionWhenPageSizeExceedsMaxLimit()
+    {
+        // Arrange
+        IEnumerable<int> items = Enumerable.Range(1, 10);
+
+        // Act
+        Action act = () => PaginationHelper.Paginate(items, 1, 100001);
+
+        // Assert
+        ArgumentException exception = act.Should().Throw<ArgumentException>()
+            .WithMessage("Page size cannot exceed 100000*")
+            .Which;
+
+        exception.ParamName.Should().Be("pageSize");
+    }
 }
