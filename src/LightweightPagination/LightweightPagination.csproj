@@ -10,7 +10,7 @@
     <Description>A lightweight helper for paginating collections in .NET.</Description>
     <PackageTags>pagination dotnet helper</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RepositoryUrl>url...</RepositoryUrl>
+    <RepositoryUrl>https://github.com/muench-develops/LightweightPagination</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
