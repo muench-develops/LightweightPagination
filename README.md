@@ -8,7 +8,7 @@ A lightweight helper library for efficient pagination in .NET. It provides utili
 
 ## Features
 
-- Paginate any collection using `IEnumerable<T>`.
+- Paginate any collection using `IEnumerable<T>`,  `IAsyncEnumerable<T>`, `IQueryable<T>`.
 - Retrieve pagination metadata, such as total pages and total items.
 - Lightweight and dependency-free.
 - Clear error handling for invalid input.
