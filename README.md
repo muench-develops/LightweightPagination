@@ -3,7 +3,7 @@
 A lightweight helper library for efficient pagination in .NET. It provides utility methods to paginate collections and retrieve pagination metadata with minimal overhead. Perfect for APIs and applications that require simple and effective data pagination.
 
 
-[![NuGet](https://img.shields.io/nuget/v/muench-develops..svg)](https://www.nuget.org/packages/muench-develops./) [![NuGet Downloads](https://img.shields.io/nuget/dt/muench-develops..svg)](https://www.nuget.org/packages/muench-develops./)
+[![NuGet](https://img.shields.io/nuget/v/muench-develops.LightweightPagination.svg)](https://www.nuget.org/packages/muench-develops.LightweightPagination/) [![NuGet Downloads](https://img.shields.io/nuget/dt/muench-develops.LightweightPagination.svg)](https://www.nuget.org/packages/muench-develops.LightweightPagination/)
 ---
 
 ## Features
@@ -20,7 +20,7 @@ A lightweight helper library for efficient pagination in .NET. It provides utili
 Install the package from NuGet:
 
 ```bash
-dotnet add package LightweightPagination
+dotnet add package muench-develops.LightweightPagination
 ```
 
 ## Usage
