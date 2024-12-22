@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>muench-develops.LightweightPagination</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Justin Muench</Authors>
+    <Description>A lightweight helper for paginating collections in .NET.</Description>
+    <PackageTags>pagination dotnet helper</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>url...</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
